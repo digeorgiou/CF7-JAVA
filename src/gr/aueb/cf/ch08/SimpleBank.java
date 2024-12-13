@@ -66,7 +66,7 @@ public class SimpleBank {
 
     }
 
-    public static void printMenu() {
+    public static void printMenu(){
         System.out.println("--- Simple Bank Menu ---");
         System.out.println("1. Deposit Money");
         System.out.println("2. Withdraw Money");

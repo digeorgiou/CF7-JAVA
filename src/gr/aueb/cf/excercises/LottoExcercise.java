@@ -197,4 +197,5 @@ public class LottoExcercise {
             return Arrays.stream(endings).anyMatch(e -> e >= threshold);
         }
     }
+
 }
