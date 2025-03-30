@@ -3,7 +3,7 @@ package gr.aueb.cf.ch06;
 public class BubbleSort {
 
     public static void main(String[] args) {
-        int[] arr = {6, 3, 7, 4};
+        int[] arr = {6, 3, 7, 4, 2, 1, 20, 12, 14};
         int[] sorted = bubbleSort(arr);
 
         for (int el : sorted) {

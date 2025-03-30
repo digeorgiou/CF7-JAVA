@@ -45,11 +45,11 @@ public class ConverterBinary {
     }
 
 
-    public double convertBinToDec(double d){
+    public double convertBinToDec(String d){
 
-        double result = 0.0;
-        double temp = d;
         int count = 0;
+        double result = 0.0;
+        double temp = Double.parseDouble(d.substring(count,count+1));
 
         while(temp % 1 > 0.0001){
             temp *= 10;

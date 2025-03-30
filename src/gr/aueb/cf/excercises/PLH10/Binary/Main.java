@@ -5,20 +5,13 @@ public class Main {
     public static void main(String[] args) {
 
         ConverterBinary cb = new ConverterBinary();
+        long sum = 0;
+        for (int i = 0 ; i < 26 ; i++){
+            sum += Math.pow(2,i);
+            System.out.println(sum);
+        }
 
-//        String d =cb.convertDecToOct(61,0);
-//        System.out.println(d);
-
-        double c = cb.convertOctToDec(373);
-        System.out.println(c);
-
-        double d = cb.convertOctToDec(4001.12);
-        System.out.println(d);
-
-        String s = cb.convertDecToOct(155,0);
-        System.out.println(s);
-
-        String s2 = cb.convertDecToOct(17.16,2);
-        System.out.println(s2);
+        long n = 494392240  ;
+        System.out.println(sum + n);
     }
 }
