@@ -19,7 +19,12 @@ public class DateTimeCli {
 
         try {
             //InetAddress ειναι ενας container για μια IP διευθυνση
-            InetAddress servAddress = InetAddress.getByName("time.nist.gov");
+
+            //συνδεση με web server που δινει την ωρα
+//            InetAddress servAddress = InetAddress.getByName("time.nist.gov");
+
+            //εδω συνδεομαστε με τον δικο μας Server στο localhost
+            InetAddress servAddress = InetAddress.getByName("127.0.0.1");
             //το Port 13 ειναι του Date Time Server
             int servPort = 13;
             socket = new Socket(servAddress, servPort);
