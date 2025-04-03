@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!--εδω οριζεται το προτυπο XSD που ακολουθειται-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="breakfast_menu">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="food" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="price">
+<!--                            μπορουμε να ορισουμε δικο μας τυπο για το
+στοιχειο price με δικους μας περιορισμους ως εξης-->
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+<!-- εδω βαζουμε απλα μια reg ex για να ειναι η τιμη $ κ ενας δεκαδικος-->
+                                        <xs:pattern value="$[0-9]*.[0-9]*"/>
+                                    </xs:restriction>
+<!--     μεσα στο restriction μπορουμε να εχουμε και enumeration απο
+επιτρεπομενες τιμες για το element-->
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="description" type="xs:string"/>
+                            <xs:element name="calories" type="xs:int"/>
+                        </xs:sequence>
+<!--               εδω οριζουμε αν ενα στοιχειο δεχεται attributes-->
+<!--               default (τιμη που μπαινει αν δεν οριστει αλλη τιμη -->
+<!--                        fixed (τιμη που μπαινει παντα)-->
+<!--                        use="required αν απαιτειται να υπαρχει τιμη για
+το συγκεκριμενο attribute-->
+                        <xs:attribute name="attr" type="xs:string"/>
+                        <xs:attribute name="attr2" type="xs:integer"
+                                      default="0"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
